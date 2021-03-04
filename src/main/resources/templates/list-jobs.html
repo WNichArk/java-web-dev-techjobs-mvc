@@ -13,24 +13,24 @@
     <!-- TODO #1 - Use a loop to display job results in a table. -->
 
 
-    <table th:block th:each="job : ${jobs}" class="job-listing">
+    <table th:each="job : ${jobs}" class="job-listing">
         <tr>
-        <td th:text="'ID: ' + ${job.id} "> </td>
+            <td th:text="'ID: ' + ${job.id} "></td>
         </tr>
         <tr>
-        <td th:text="'Name: ' + ${job.name} "></td>
+            <td th:text="'Name: ' + ${job.name} "></td>
         </tr>
         <tr>
-        <td th:text="'Employer: ' + ${job.employer} "></td>
+            <td><p>Employer: <a th:href="@{/list/jobs(column='employer',value=${job.employer})}" th:text="${job.employer}"></a></p></td>
         </tr>
         <tr>
-        <td th:text="'Location: ' + ${job.location} "></td>
+            <td><p>Location: <a th:href="@{/list/jobs(column='location',value=${job.location})}" th:text="${job.location}"></a></p></td>
         </tr>
         <tr>
-        <td th:text="'Postition Type: ' + ${job.positionType} "></td>
+            <td><p>Position Type: <a th:href="@{/list/jobs(column='positionType',value=${job.positionType})}" th:text="${job.positionType}"></a></p></td>
         </tr>
         <tr>
-        <td th:text="'Skill: ' + ${job.coreCompetency} "></td>
+            <td><p>Skill: <a th:href="@{/list/jobs(column='coreCompetencyr',value=${job.coreCompetency})}" th:text="${job.coreCompetency}"></a></p></td>
         </tr>
 
     </table>

@@ -37,7 +37,7 @@
     <hr />
 
 
-    <table th:block th:each="job : ${jobs}" class="job-listing">
+    <table th:each="job : ${jobs}" class="job-listing">
         <tr>
             <td th:text="'ID: ' + ${job.id} "></td>
         </tr>
